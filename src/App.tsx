@@ -1,7 +1,10 @@
+import Navbar from "./components/navbar"
+
 function App() {
 
   return (
-    <div>
+    <div className=" app bg-cyan-50">
+      <Navbar />
       app
       
     </div>
