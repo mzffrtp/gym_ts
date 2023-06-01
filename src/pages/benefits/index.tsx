@@ -1,6 +1,8 @@
 
 export default function Benefits () {
     return (
-        <p>benefits</p>
+        <>
+        <div className="z-2">benefitfs page </div>
+        </>
     )
 }
