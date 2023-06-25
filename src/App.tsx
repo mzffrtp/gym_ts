@@ -13,18 +13,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<HomePage/>} />
-
-        <Route path={"benefits"}>
-          <Route index element={<Benefits />} />
-        </Route>
-
-        <Route path={"contactus"}>
-          <Route  index element={<ContactUs />}/>
-        </Route>
-
-        <Route path={"ourclasses"}>
-          <Route index element={<OurClasses />}/>
-        </Route>
+        <Route path="benefits" element={<Benefits />} />
+        <Route path="contactus" element={<ContactUs />}/>
+        <Route path="ourclasses" element={<OurClasses />}/>
       </Routes>
     </div>
     </BrowserRouter>
