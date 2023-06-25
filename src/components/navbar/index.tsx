@@ -13,18 +13,18 @@ export default function Navbar() {
             <img src={logo} />
             <p className="text-center w-56"> MT Body Worx</p>
           </div>
-          <div>
-            <button></button>
-          </div>
-          <div className={`${flexBetween} gap-8 text-sm`}>
+          {
+            // todo: hamburger menu
+          }
+          <div className={`${flexBetween} gap-16 text-sm`}>
             <Link to={"/"}>Home</Link>
             <Link to={"benefits"}>Benefits</Link>
             <Link to={"ourclasses"}>Our Classes</Link>
             <Link to={"contactus"}>Contact Us</Link>
           </div>
-          <div className={`${flexBetween} w-174 gap-8`}>
-            <button>{member ? "Sign In" : "Become a member"}</button>
-          </div>
+          <button className="w-52 rounded-full border-4 border-fuchsia-500 border-double hover:bg-fuchsia-200">
+            {member ? "Sign In" : "Become a member"}
+          </button>
         </div>
       </div>
     </nav>
