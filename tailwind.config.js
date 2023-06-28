@@ -38,7 +38,5 @@ export default {
       md: "1060px",
     },
   },
-  plugins: [
-    require("flowbite/plugin")
-  ],
+  plugins: [],
 }
