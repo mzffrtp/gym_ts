@@ -1,8 +1,16 @@
 import logo from "@/assets/logobody.png";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import Link from "../links";
+import { SelectedPage } from "@/shared/types";
 
-export default function Navbar() {
+type NavbarPropsType = {
+  selectedPage: SelectedPage;
+  setSelectedPage: (value: SelectedPage) => void;
+};
+
+export default function Navbar({
+  selectedPage,
+  setSelectedPage,
+}: NavbarPropsType) {
   const flexBetween = "flex items-center justify-between";
   return (
     <nav>
@@ -19,10 +27,26 @@ export default function Navbar() {
             {/* Middle and Right side */}
             <div className={`${flexBetween} w-4/5 py-4`}>
               <div className={`${flexBetween} gap-16 text-sm`}>
-                <Link to={"/"}>Home</Link>
-                <Link to={"benefits"}>Benefits</Link>
-                <Link to={"ourclasses"}>Our Classes</Link>
-                <Link to={"contactus"}>Contact Us</Link>
+                <Link
+                  page="Home"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+                <Link
+                  page="Benefits"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+                <Link
+                  page="Our Classes"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+                <Link
+                  page="Contact Us"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
               </div>
               <div className={`${flexBetween} gap-8`}>
                 <button className="w-24 hover:bg-fuchsia-200 hover:rounded-full text-lg p-2">

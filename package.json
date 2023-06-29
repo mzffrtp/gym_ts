@@ -15,12 +15,14 @@
     "flowbite-react": "^0.4.9",
     "framer-motion": "^10.12.16",
     "react": "^18.2.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2"
   },
   "devDependencies": {
     "@types/node": "^20.2.5",
     "@types/react": "^18.0.28",
+    "@types/react-anchor-link-smooth-scroll": "^1.0.2",
     "@types/react-dom": "^18.0.11",
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
