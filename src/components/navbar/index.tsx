@@ -10,19 +10,23 @@ import MobilMenuModal from "./mobil-menu-modal";
 type NavbarPropsType = {
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
+  isTopOfPage: boolean;
 };
 
 export default function Navbar({
   selectedPage,
   setSelectedPage,
+  isTopOfPage,
 }: NavbarPropsType) {
   const flexBetween = "flex items-center justify-between";
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px");
   const [menuToogled, setMenuToogled] = useState<boolean>(false);
+  const navbarBg = isTopOfPage ? "" : "bg-cyan-200 drop-shadow";
+
   return (
     <nav>
       <div
-        className={`${flexBetween} fixed top-0 z-30 py-6 w-full bg-teal-100`}
+        className={`${navbarBg} ${flexBetween} fixed top-0 z-30 py-6 w-full`}
       >
         <div className={` ${flexBetween}  mx-auto w-5/6`}>
           <div className={` ${flexBetween}  w-full gap-16`}>
@@ -31,8 +35,8 @@ export default function Navbar({
               <img src={logo} />
               <p className="text-center w-56"> MT Body Worx</p>
             </div>
-            {/* Middle and Right side */}
 
+            {/* Middle and Right side */}
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-4/5 py-4`}>
                 <div className={`${flexBetween} gap-16 text-sm`}>
@@ -81,6 +85,7 @@ export default function Navbar({
           </div>
         </div>
       </div>
+
       {/* mobil menu modal */}
       {!isAboveMediumScreens && menuToogled && (
         <MobilMenuModal
