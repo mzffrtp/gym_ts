@@ -4,6 +4,8 @@ import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useState } from "react";
 import { Bars3Icon } from "@heroicons/react/20/solid";
+import ActionButton from "@/shared/action-button/action-button";
+import MobilMenuModal from "./mobil-menu-modal";
 
 type NavbarPropsType = {
   selectedPage: SelectedPage;
@@ -59,9 +61,9 @@ export default function Navbar({
                   <button className="w-24 hover:bg-fuchsia-200 hover:rounded-full text-lg p-2">
                     Sign In
                   </button>
-                  <button className="w-52 rounded-full bg-lime-300 hover:bg-fuchsia-200 text-lg p-2">
+                  <ActionButton setSelectedPage={setSelectedPage}>
                     Become a member
-                  </button>
+                  </ActionButton>
                 </div>
               </div>
             ) : (
@@ -69,6 +71,8 @@ export default function Navbar({
                 className="rounded-full bg-secondary-500 p-2"
                 onClick={() => {
                   setMenuToogled(!menuToogled);
+                  console.log("hamburger menu tiklandi");
+                  console.log("menu toogled", menuToogled);
                 }}
               >
                 <Bars3Icon className="h-6 w-6 text-white" />
@@ -77,6 +81,15 @@ export default function Navbar({
           </div>
         </div>
       </div>
+      {/* mobil menu modal */}
+      {!isAboveMediumScreens && menuToogled && (
+        <MobilMenuModal
+          setMenuToogled={setMenuToogled}
+          menuToogled={menuToogled}
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+        />
+      )}
     </nav>
   );
 }

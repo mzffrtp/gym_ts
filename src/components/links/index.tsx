@@ -17,12 +17,14 @@ export default function Link({
   return (
     <AnchorLink
       className={`${
-        selectedPage === lowerCasePage
-          ? "text-primary-500 text-xl"
-          : " transition duration-500 hover:text-primary-300"
-      }`}
+        selectedPage === lowerCasePage ? "text-primary-500 text-xl" : ""
+      }  transition duration-500 hover:text-primary-300
+      `}
       href={`#${lowerCasePage}`}
-      onClick={() => setSelectedPage(lowerCasePage)}
+      onClick={() => {
+        setSelectedPage(lowerCasePage);
+        console.log(selectedPage, "selected page");
+      }}
     >
       {page}
     </AnchorLink>
