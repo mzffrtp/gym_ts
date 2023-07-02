@@ -3,6 +3,10 @@ import ActionButton from "@/shared/action-button/action-button";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import gymlogo from "@/assets/gymlogo.png";
 import homepic from "@/assets/workout1.png";
+import jupiter from "@/assets/jupiter.png";
+import winn from "@/assets/winn.png";
+import angle from "@/assets/angle.png";
+
 import { SelectedPage } from "@/shared/types";
 
 type HomePagePropsType = {
@@ -12,7 +16,7 @@ type HomePagePropsType = {
 export default function HomePage({ setSelectedPage }: HomePagePropsType) {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   return (
-    <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
+    <section id="home" className="gap-16 bg-gray-20 py-10 md:h-max md:pb-0">
       {/* image and main header */}
       <div className="mx-auto w-5/6 itmes-center justify-center md:flex md:h-5/6">
         {/* main header */}
@@ -26,7 +30,7 @@ export default function HomePage({ setSelectedPage }: HomePagePropsType) {
             </div>
             <p className="mt-8 text-sm">
               Unrivaled training for fitness. You are very near to get your{" "}
-              <span>DREAM Body</span>now!
+              <span>DREAM Body</span>!
             </p>
           </div>
           {/* actions */}
@@ -45,18 +49,28 @@ export default function HomePage({ setSelectedPage }: HomePagePropsType) {
           </div>
         </div>
         {/* image */}
-        <div className="flex baisis:3/5 md:h-[25rem] md:w-[35rem] justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
+        <div className="flex baisis:3/5 md:h-[25rem] md:w-[35rem] justify-center md:z-10 md:ml-40 md:my-20 md:justify-items-end">
           <img alt="home image" src={homepic} />
         </div>
       </div>
       {/* sponsors */}
       {isAboveMediumScreens && (
-        <div>
-          <div>
-            <div>
-              <img alt="redbul" src={"redbul"} />
-              <img alt="sponsor 2" src={"redbul"} />
-              <img alt="sponsor3" src={"redbul"} />
+        <div className="h-[15rem] w-full py-10 bg-primary-100">
+          <div className="mx-auto w-5/6">
+            <p className="text-2xl mb-3 underline">Our Sponsors</p>
+            <div className="flex w-3/5 items-center justify-between gap-8 my-9">
+              <div className="flex flex-col align-middle gap-3 items-center">
+                <img alt="Jupiter" src={jupiter} className="h-16" />
+                <p>Jupiter</p>
+              </div>
+              <div className="flex flex-col align-middle gap-3 items-center">
+                <img alt="winn" src={winn} className="h-16" />
+                <p>Winn</p>
+              </div>
+              <div className="flex flex-col align-middle gap-3 items-center">
+                <img className="h-16" alt="angle" src={angle} />
+                <p>Angle</p>
+              </div>
             </div>
           </div>
         </div>
