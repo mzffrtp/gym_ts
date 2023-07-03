@@ -79,7 +79,16 @@ export default function HomePage({ setSelectedPage }: HomePagePropsType) {
         </div>
         {/* image */}
         <div className="flex baisis:3/5 md:h-[25rem] md:w-[35rem] justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
-          <img alt="home image" src={homepic} />
+          <motion.img
+            whileHover={{
+              y: -10,
+              x: 150,
+              rotate: -10,
+              transition: { duration: 0.4 },
+            }}
+            alt="home image"
+            src={homepic}
+          />
         </div>
       </motion.div>
       {/* sponsors */}
