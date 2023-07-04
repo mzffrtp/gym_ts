@@ -81,8 +81,8 @@ export default function HomePage({ setSelectedPage }: HomePagePropsType) {
         <div className="flex baisis:3/5 md:h-[25rem] md:w-[35rem] justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end ">
           <motion.img
             whileHover={{
-              y: -10,
-              x: 150,
+              y: 10,
+              x: -150,
               transition: { duration: 0.4 },
             }}
             className="w-[25rem] mt-3"

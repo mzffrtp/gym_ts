@@ -3,6 +3,7 @@ import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import Benefit from "./components/benefit/benefit";
 import GrapDes from "./components/graphic-defination";
+import BenBtn from "./components/benefit-buttons";
 
 type BenefitsPropsType = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -49,6 +50,8 @@ export default function Benefits({ setSelectedPage }: BenefitsPropsType) {
         </motion.div>
         {/* page pic and description */}
         <GrapDes />
+        {/* buttons */}
+        <BenBtn setSelectedPage={setSelectedPage} />
       </motion.div>
     </section>
   );
