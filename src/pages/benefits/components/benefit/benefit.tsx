@@ -48,15 +48,11 @@ export default function Benefit({ setSelectedPage }: BenefitPropsType) {
           </div>
         </div>
 
-        <h4 className="font-bold">
-          Countless options to diversify your fitness journey
-        </h4>
+        <h4 className="font-bold">Endless options for a diverse journey!</h4>
         <p className="my-3">
-          Embark on a fitness journey filled with endless possibilities as you
-          explore a wide array of options designed to diversify your workout
-          routine. With countless classes and activities to choose from, you can
-          discover new ways to challenge yourself, stay motivated, and achieve
-          your fitness goals with excitement and variety.
+          Dive into a world of fitness possibilities! Explore diverse classes,
+          stay motivated, and reach your goals. Join us on a thrilling fitness
+          journey today! Do not hesistate!
         </p>
         <AnchorLink
           className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"

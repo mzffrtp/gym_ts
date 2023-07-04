@@ -1,14 +1,8 @@
 import HText from "@/shared/header-text";
-import { BenefitType, SelectedPage } from "@/shared/types";
+import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import Benefit from "./components/benefit/benefit";
-
-const container = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.2 },
-  },
-};
+import GrapDes from "./components/graphic-defination";
 
 type BenefitsPropsType = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -53,6 +47,8 @@ export default function Benefits({ setSelectedPage }: BenefitsPropsType) {
         >
           <Benefit setSelectedPage={setSelectedPage} />
         </motion.div>
+        {/* page pic and description */}
+        <GrapDes />
       </motion.div>
     </section>
   );

@@ -3,7 +3,7 @@ import ActionButton from "@/shared/action-button/action-button";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import gymlogo from "@/assets/gymlogo.png";
-import homepic from "@/assets/workout1.png";
+import homepic from "@/assets/homepic.png";
 import jupiter from "@/assets/jupiter.png";
 import winn from "@/assets/winn.png";
 import angle from "@/assets/angle.png";
@@ -43,7 +43,7 @@ export default function HomePage({ setSelectedPage }: HomePagePropsType) {
             }}
           >
             <div className="relative">
-              <div className="before:absolute before:-top-20 before::-left-20 before:z-[-1] ">
+              <div className="before:absolute before:-top-20 before::-left-20 before:z-[-1]">
                 <img alt="home page text" src={gymlogo} />
               </div>
             </div>
@@ -78,14 +78,14 @@ export default function HomePage({ setSelectedPage }: HomePagePropsType) {
           </motion.div>
         </div>
         {/* image */}
-        <div className="flex baisis:3/5 md:h-[25rem] md:w-[35rem] justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
+        <div className="flex baisis:3/5 md:h-[25rem] md:w-[35rem] justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end ">
           <motion.img
             whileHover={{
               y: -10,
               x: 150,
-              rotate: -10,
               transition: { duration: 0.4 },
             }}
+            className="w-[25rem] mt-3"
             alt="home image"
             src={homepic}
           />
