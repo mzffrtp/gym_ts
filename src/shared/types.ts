@@ -11,7 +11,7 @@ export type BenefitType = {
   description: string;
 };
 
-export type ClassType = {
+export type LessonsType = {
   name: string;
   description?: string;
   image: string;

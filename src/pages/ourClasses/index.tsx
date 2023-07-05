@@ -1,6 +1,7 @@
 import HText from "@/shared/header-text";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
+import Lesson from "./components/lesson/lesson";
 
 type OurClassesPropsType = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -36,6 +37,7 @@ export default function OurClasses({ setSelectedPage }: OurClassesPropsType) {
             </p>
           </div>
         </motion.div>
+        <Lesson />
       </motion.div>
     </section>
   );
