@@ -1,4 +1,3 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "@/components/navbar";
 import HomePage from "@/pages/home";
 import Benefits from "@/pages/benefits";
@@ -33,6 +32,7 @@ function App() {
       />
       <HomePage setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
+      <OurClasses setSelectedPage={setSelectedPage} />
     </div>
   );
 }

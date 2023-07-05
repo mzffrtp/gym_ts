@@ -11,7 +11,7 @@ export default function GrapDes() {
         src={benefitsimage}
         whileHover={{
           y: -20,
-          x: 150,
+          x: 90,
         }}
       />
       <div>
@@ -41,7 +41,7 @@ export default function GrapDes() {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="my-5">
+          <p className="my-5 text-justify">
             Welcome to the Fitness Excellence Community, where extraordinary
             individuals like you come together to unlock their true potential
             and achieve unparalleled fitness greatness. Here, we celebrate the
@@ -49,7 +49,7 @@ export default function GrapDes() {
             community of like-minded individuals who share a common goal: to
             reach new heights of physical and mental strength.
           </p>
-          <p className="mb-5">
+          <p className="mb-5 text-justify">
             As a member of our Fitness Excellence Community, you'll discover a
             whole new level of motivation and accountability. Our dedicated team
             of passionate fitness professionals will guide and challenge you,
