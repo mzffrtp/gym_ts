@@ -1,12 +1,32 @@
 import { IFormInput } from "@/shared/types/form-types";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
+import { inputStyles } from "../../style/inputStyles";
 
 export default function Form() {
   const {
     register,
-    formState: { errors },
+    formState: { errors, isSubmitSuccessful, isSubmitted },
+    trigger,
+    reset,
   } = useForm<IFormInput>();
+
+  const validateAge = (value: number) => {
+    if (value <= 18 || value > 99) {
+      return "Invalid Age, you should be over 18 and below 99!";
+    }
+    return true;
+  };
+
+  const onSubmit = async (e: any) => {
+    if (errors) {
+      return;
+    }
+    const isValid = await trigger();
+    !isValid && e.preventDefault;
+    reset();
+  };
+
   return (
     <div className="mt-10 justify-between gap-8 md:flex">
       <motion.div
@@ -22,11 +42,12 @@ export default function Form() {
       >
         <form
           target="_blank"
-          action="https://formsubmit.co/mzffr.tpgl@gmail.com"
+          action="https://formsubmit.co/84a465731cb5c9951eb04c7999269357"
           method="POST"
+          onSubmit={onSubmit}
         >
           <input
-            className=""
+            className={inputStyles}
             type="text"
             placeholder="Name"
             {...register("name", {
@@ -39,6 +60,70 @@ export default function Form() {
               {errors.name.type === "required" && "This field is required!"}
               {errors.name.type === "maxLength" &&
                 "Max length is 20 charracters!"}
+            </p>
+          )}
+          <input
+            className={inputStyles}
+            type="text"
+            placeholder="EMAIL"
+            {...register("email", {
+              required: true,
+              pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+            })}
+          />
+          {errors.email && (
+            <p className="mt-1 text-primary-500">
+              {errors.email.type === "required" && "This field is required!"}
+              {errors.email.type === "pattern" && "Invalid email address!"}
+            </p>
+          )}
+          <input
+            className={inputStyles}
+            type="number"
+            placeholder="AGE"
+            {...register("age", {
+              validate: validateAge,
+            })}
+          />
+          {errors.age && (
+            <p className="mt-1 text-primary-500">{errors.age.message}</p>
+          )}
+          <select
+            className="mb-5 w-2/5 h-[2rem] rounded-lg bg-primary-300 px-5 py-3 placeholder-white"
+            {...register("gender")}
+          >
+            <option value="">Gender</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+          </select>
+          <textarea
+            className={inputStyles}
+            placeholder="MESSAGE"
+            rows={4}
+            cols={50}
+            {...register("message", {
+              required: true,
+              maxLength: 2000,
+            })}
+          />
+          {errors.message && (
+            <p className="mt-1 text-primary-500">
+              {errors.message.type === "required" && "This field is required!"}
+              {errors.message.type === "maxLength" &&
+                "Text length should not be over 2000 caharacters!"}
+            </p>
+          )}
+          <button
+            type="submit"
+            className="bg-secondary-500 rounded-lg mt-5 px-20 py-3 hover:text-white transition duration-500"
+          >
+            Submit
+          </button>
+          {isSubmitSuccessful && isSubmitted && (
+            <p className="mt-1 text-primary-500">
+              {" "}
+              Form submitted successfully!
             </p>
           )}
         </form>

@@ -1,6 +1,7 @@
 import HText from "@/shared/header-text";
 import { SelectedPage } from "@/shared/types/other-types";
 import { motion } from "framer-motion";
+import Form from "./components/form/form";
 
 type ContactUsPropsType = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -32,6 +33,7 @@ export default function ContactUs({ setSelectedPage }: ContactUsPropsType) {
             today for a healthier, stronger, and more confident you.
           </p>
         </motion.div>
+        <Form />
       </motion.div>
     </section>
   );

@@ -9,4 +9,5 @@ export interface IFormInput {
   age: number;
   email: string;
   gender: GenderEnum;
+  message: string;
 }
