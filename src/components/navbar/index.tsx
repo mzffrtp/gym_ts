@@ -21,7 +21,7 @@ export default function Navbar({
   const flexBetween = "flex items-center justify-between";
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px");
   const [menuToogled, setMenuToogled] = useState<boolean>(false);
-  const navbarBg = isTopOfPage ? "" : "bg-cyan-200 drop-shadow";
+  const navbarBg = isTopOfPage ? "" : "bg-cyan-50 drop-shadow";
 
   return (
     <nav>

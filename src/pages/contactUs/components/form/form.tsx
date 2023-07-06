@@ -87,12 +87,18 @@ export default function Form() {
         {errors.age && (
           <p className="mt-1 text-primary-500">{errors.age.message}</p>
         )}
-        <select className={inputStyles} {...register("gender")}>
-          <option value="">Gender</option>
-          <option value="female">Female</option>
-          <option value="male">Male</option>
-          <option value="other">Other</option>
-        </select>
+        <div className={inputStyles}>
+          <select
+            className="w-full bg-primary-300 h-full text-white"
+            {...register("gender")}
+          >
+            <option value="">GENDER</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
         <textarea
           className={inputStyles}
           placeholder="MESSAGE"
