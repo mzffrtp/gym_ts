@@ -1,5 +1,5 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { SelectedPage } from "../types";
+import { SelectedPage } from "../types/other-types";
 type ActionButtonPropsType = {
   children: React.ReactNode;
   setSelectedPage: (value: SelectedPage) => void;

@@ -1,5 +1,5 @@
 import Link from "@/components/links";
-import { SelectedPage } from "@/shared/types";
+import { SelectedPage } from "@/shared/types/other-types";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 
 type MobimMenuModalPropsType = {

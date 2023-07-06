@@ -4,7 +4,7 @@ import core from "@/assets/core.jpg";
 import advanture from "@/assets/adventure.jpg";
 import fitness from "@/assets/fitness.jpg";
 import training from "@/assets/training.jpg";
-import { LessonsType } from "@/shared/types";
+import { LessonsType } from "@/shared/types/other-types.ts";
 import overlayStyle from "../../style/style.ts";
 
 const lessons: LessonsType[] = [

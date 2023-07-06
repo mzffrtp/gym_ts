@@ -4,7 +4,7 @@ import core from "@/assets/core.jpg";
 import advanture from "@/assets/advanture.jpg";
 import fitness from "@/assets/futness.jpg";
 import training from "@/assets/training.jpg";
-import { LessonsType } from "@/shared/types";
+import { LessonsType } from "@/shared/types/other-types";
 
 const lessons: LessonsType[] = [
   {

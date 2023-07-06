@@ -8,7 +8,7 @@ import jupiter from "@/assets/jupiter.png";
 import winn from "@/assets/winn.png";
 import angle from "@/assets/angle.png";
 
-import { SelectedPage } from "@/shared/types";
+import { SelectedPage } from "@/shared/types/other-types";
 
 import { motion } from "framer-motion";
 

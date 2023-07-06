@@ -1,5 +1,5 @@
 import HText from "@/shared/header-text";
-import { SelectedPage } from "@/shared/types";
+import { SelectedPage } from "@/shared/types/other-types";
 import { motion } from "framer-motion";
 import Benefit from "./components/benefit/benefit";
 import GrapDes from "./components/graphic-defination";
@@ -10,7 +10,7 @@ type BenefitsPropsType = {
 };
 export default function Benefits({ setSelectedPage }: BenefitsPropsType) {
   return (
-    <section id="benfits" className="mx-auto min-h-full w-5/6 py-10">
+    <section id="benefits" className="mx-auto min-h-full w-5/6 py-10">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >

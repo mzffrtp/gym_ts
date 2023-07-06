@@ -1,5 +1,5 @@
 import ActionButton from "@/shared/action-button/action-button";
-import { SelectedPage } from "@/shared/types";
+import { SelectedPage } from "@/shared/types/other-types";
 
 type BenBtnPropsType = {
   setSelectedPage: (value: SelectedPage) => void;

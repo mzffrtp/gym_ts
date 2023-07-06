@@ -1,6 +1,6 @@
 import logo from "@/assets/logobody.png";
 import Link from "../links";
-import { SelectedPage } from "@/shared/types";
+import { SelectedPage } from "@/shared/types/other-types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useState } from "react";
 import { Bars3Icon } from "@heroicons/react/20/solid";

@@ -1,5 +1,5 @@
 import HText from "@/shared/header-text";
-import { SelectedPage } from "@/shared/types";
+import { SelectedPage } from "@/shared/types/other-types";
 import { motion } from "framer-motion";
 import Lesson from "./components/lesson/lesson";
 
