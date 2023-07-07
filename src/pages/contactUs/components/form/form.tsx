@@ -41,7 +41,7 @@ export default function Form() {
     >
       <form
         target="_blank"
-        action="https://formsubmit.co/84a465731cb5c9951eb04c7999269357"
+        action="https://formsubmit.co/mzffr.tpgl@gmail.com"
         method="POST"
         onSubmit={onSubmit}
       >
