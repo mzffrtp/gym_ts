@@ -1,7 +1,7 @@
 A "GYM" app coded with typescript and reactJS and tailwind for designs.
 
 - routing with " react-anchor-link-smooth-scroll ",
-- icons from "react-anchor-link-smooth-scroll" by tailwind
+- icons from "heroicons/react" by tailwind
 - animations by "framer-motion"
   **_ !!! forms (+validations) by "react-hook-form" !!! _**
 
