@@ -47,9 +47,12 @@ export default function HomePage({ setSelectedPage }: HomePagePropsType) {
                 <img alt="home page text" src={gymlogo} />
               </div>
             </div>
-            <p className="mt-8 text-sm">
+            <p className="mt-8 ">
               Unrivaled training for fitness. You are very near to get your{" "}
-              <span>DREAM Body</span>!
+              <span className="text-2xl text-secondary-100 font-bold ">
+                DREAM
+              </span>{" "}
+              Body!
             </p>
           </motion.div>
           {/* actions */}
@@ -82,7 +85,7 @@ export default function HomePage({ setSelectedPage }: HomePagePropsType) {
           <motion.img
             whileHover={{
               y: 10,
-              x: -150,
+              x: -110,
               transition: { duration: 0.4 },
             }}
             className="w-[25rem] mt-3"

@@ -14,25 +14,28 @@ export default function Footer({
     <footer className="py-16 bg-primary-100 drop-shadow">
       <div className="justify-content w-5/6 mx-auto gap-16 md:flex ">
         <div className="basis-1/2 mb-16">
-          <img src={logo} />
+          <div className="flex items-center">
+            <img src={logo} />
+            <p className="text-center w-56 text-2xl text-primary-500 font-bold underline underline-offset-8">
+              {" "}
+              MT Body Worx
+            </p>
+          </div>
           <p className="my-5">
-            <span className="text-primary-500 text-xl font-bold">
-              MT Body Worx
-            </span>{" "}
-            is more than just a place to sweat. It's a sanctuary where dreams
-            become reality, where you discover the strength you never knew you
-            had, and where your body works in harmony with your aspirations.
-            Join us and experience the extraordinary. Your transformation awaits
-            at{" "}
-            <span className="text-primary-500 text-xl font-bold">
-              MT Body Worx
-            </span>
-            .
+            <span className=" text-xl font-bold">MT Body Worx</span> is more
+            than just a place to sweat. It's a sanctuary where dreams become
+            reality, where you discover the strength you never knew you had, and
+            where your body works in harmony with your aspirations. Join us and
+            experience the extraordinary. Your transformation awaits at here
+            with us.
+          </p>
+          <p className="text-center my-3">
+            <span className="text-3xl px-40 md:px-0">💪🏋️‍♂️👊</span>
           </p>
           <p>© MT Body Worx All Rights Reserved.</p>
         </div>
         <div className="md:basis-1/4 text-center  md:mt-0 bg-red-50 md:bg-primary-100">
-          <h4 className="font-bold mb-5">Links</h4>
+          <h4 className="font-bold mb-5 text-2xl">Links</h4>
           <div className="flex flex-col gap-3 items-center">
             <button className="w-2/3 bg-white hover:bg-primary-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
               <Link
@@ -65,16 +68,16 @@ export default function Footer({
           </div>
         </div>
         <div className="basis-1/4 mt-10 md:mt-0 text-center">
-          <h4 className="font-bold mb-5">Contact Us</h4>
-          <div className="flex flex-col gap-5 items-center">
-            <div className="flex items-center gap-3 p-3 w-3/4 hover:bg-white hover:rounded-full">
+          <h4 className="font-bold mb-5 text-2xl">Contact Us</h4>
+          <div className="w-full flex flex-col gap-5 items-center ">
+            <div className="flex items-center gap-3 p-3  hover:bg-white hover:rounded-full">
               <img
                 className="w-[3rem]"
                 src="https://img.icons8.com/external-rabit-jes-detailed-outline-rabit-jes/62/external-pin-navigation-and-maps-rabit-jes-detailed-outline-rabit-jes-2.png"
               />
               <p>Bahceli/Ankara</p>
             </div>
-            <div className="flex items-center gap-3 p-3 w-3/4 hover:bg-white hover:rounded-full">
+            <div className="flex items-center gap-3 p-3  hover:bg-white hover:rounded-full">
               <img
                 className="w-[3rem]"
                 src="https://img.icons8.com/ios/50/ringer-volume.png"

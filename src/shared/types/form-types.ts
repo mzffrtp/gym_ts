@@ -8,6 +8,6 @@ export interface IFormInput {
   name: string;
   age: number;
   email: string;
-  gender: GenderEnum;
+  gender?: GenderEnum;
   message: string;
 }
